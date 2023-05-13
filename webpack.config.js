@@ -46,6 +46,17 @@ module.exports = {
       template: "src/template.html",
     }),
   ],
+
+  devServer: {
+    static: {
+      directory: "dist",
+    },
+    compress: true, // bật gzip cho tài nguyên
+    port: 3000,
+    open: true, // open khi terminal run
+    hot: true, // bật reload nhanh Hot Module Replacement
+    historyApiFallback: true, // set true when use SPA
+  },
 };
 
 //note: Những path có thể sử dụng đường dẫn tương đối thì có thể sử dụng tuyệt đối
